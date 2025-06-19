@@ -1,0 +1,30 @@
+html
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Trang web của tôi</title>
+  <script>
+    function checkPassword() {
+      var password = prompt("Nhập mật khẩu:");
+      if (password !== "1234") {
+        alert("Sai mật khẩu! Trang sẽ không được hiển thị.");
+        document.body.innerHTML = "<h1>Bạn không được phép truy cập.</h1>";
+      } else {
+        document.getElementById("content").style.display = "block";
+      }
+    }
+    window.onload = checkPassword;
+  </script>
+  <style>
+    #content { display: none; }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h1>Chào mừng!</h1>
+    <p>Đây là trang web của tôi, chỉ dành cho người có mật khẩu.</p>
+  </div>
+</body>
+</html>
